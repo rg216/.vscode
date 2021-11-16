@@ -10,6 +10,8 @@
         "cstdlib": "cpp",
         "system_error": "cpp",
         "typeinfo": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "P1014.C": "cpp",
+        "P1533.C": "cpp"
     }
 }

@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdbool.h>
 #include<windows.h>
-
+#include<math.h>
 int reverse(int a);
 
 int main(){
@@ -16,19 +16,18 @@ int main(){
 }
 
 int reverse(int a){
-    int b=0,de_1=1;
-
-    while(de_1*10<=a){
-    de_1*=10;
+    int len=1;
+    int a1=a;
+    while(a1/10!=0){
+        len++;
+        a1/=10;
     }
 
-    while(de_1>=1){
-    b+=(a%10)*de_1;
-    a/=10;
-    de_1/=10;
+    if(a/10!=0){
+        return reverse(a%(int)pow(10,len-1))*10+a/pow(10,len-1);
+    }else{
+        return a;
     }
-
-    return b;
 }
 
 _Bool isPrime(int a){
